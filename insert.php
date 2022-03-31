@@ -33,29 +33,15 @@ if (isset($fName) || isset($lName) || isset($email) || isset($password) || isset
       $stmt->bind_result($email);
       $stmt->store_result();
       $rnum = $stmt->num_rows;
-      echo $fName, $lName, $email, $password, $username, $areaCode;
-      
-      // $result = mysql_query($query);
-      // if (!$result) {
-      //   die('Invalid query: ' . mysql_error());
-      // }
-
-      // if ($rnum == 0) {
-      //   $stmt->close();
+      // try/catch-Prepares insert statement and executes. Catches errors php exeptions.Inserts data
         try{
         $stmt = $conn->prepare($INSERT); 
         $stmt->bind_param("isssssi", $fName, $lName, $email, $password, $username, $areaCode);
         $stmt->execute();         
         }catch (exception $e){
-          echo"error";
+          echo "error";
         }
-        
-
-        echo "New record inserted successfully.";
-      // } else {
-      //   echo "Someone already registered using this email.";
-      // }
-     
+        echo "New record inserted successfully."; 
     }
     echo ("Connection established");
   } else {
