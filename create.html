@@ -63,15 +63,34 @@
         <!-- Modal body -->
         <div class="modal-body">
             <form action="insert.php" method="POST" style="text-align: center"; style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/d/d0/Elegant_Background-3.jpg)";>
-                <input class="codeView" type="text" name="fName" placeholder="First Name" style="background-color:rgba(255, 166, 0, 0)"; ><br>
-                <input class="codeView" type="text" name="lName" placeholder="Last Name" style="background-color:rgba(255, 166, 0, 0)";><br>
-                <input class="codeView" type="email" placeholder="Email" id="email" name="email" style="background-color:rgba(255, 166, 0, 0)" required;/><br>
-                <input type="password" placeholder="Password" id="password">
-                <input type="checkbox" onclick="myFunction()">Show Password
-                <input class="codeView" type="text" name="username" placeholder="Username" style="background-color:rgba(255, 166, 0, 0)"; ><br>
-                <input class="codeView" type="text" name="areaCode" placeholder="Area Code" style="background-color:rgba(255, 166, 0, 0)";><br>
+              <table>
+              <tr>
+            <td><input class="codeView" type="text" name="fName" placeholder="First Name" style="background-color:rgba(255, 166, 0, 0)" required;><br></td>
+              </tr>
+              <tr>
+              <td><input class="codeView" type="text" name="lName" placeholder="Last Name" style="background-color:rgba(255, 166, 0, 0)" required;><br></td>
+            </tr>
+            <tr>
+                <td><input class="codeView" type="email" placeholder="Email" id="email" name="email" style="background-color:rgba(255, 166, 0, 0)" required;/><br></td>
+              </tr>
+              <tr>
+                <td><input type="password" placeholder="Password" name="password" id="password" required></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" onclick="myFunction()">Show Password</td>
+              </tr>
+              <tr>
+                <td><input class="codeView" type="text" name="username" placeholder="Username" style="background-color:rgba(255, 166, 0, 0)" required; ><br></td>
+              </tr>
+              <tr>
+                <td><input class="codeView" type="text" name="areaCode" placeholder="Area Code" style="background-color:rgba(255, 166, 0, 0)" required;><br></td>
+              </tr>
+              <tr>
                 <div>
-                <input type="submit" value="Submit" class="button" data-toggle="tooltip" title="Hooray!"/></div>
+                  <td><input type="submit" value="Submit" class="button" data-toggle="tooltip" title="Hooray!"/></td>
+                </tr>
+              </table>
+                  </div>
                 </form>
         <!--   <textarea id ="notepad" name = "notepad" cols="41" rows="25" style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/d/d0/Elegant_Background-3.jpg);"> 
             </textarea>
