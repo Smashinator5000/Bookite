@@ -51,5 +51,4 @@ if (isset($fName) || isset($lName) || isset($email) || isset($password) || isset
   $stmt->close();
   $conn->close();
 }
-// }
 ?>
