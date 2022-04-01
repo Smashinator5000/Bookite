@@ -36,7 +36,7 @@ if (isset($fName) || isset($lName) || isset($email) || isset($password) || isset
       // try/catch-Prepares insert statement and executes. Catches errors php exeptions.Inserts data
         try{
         $stmt = $conn->prepare($INSERT); 
-        $stmt->bind_param("isssssi", $fName, $lName, $email, $password, $username, $areaCode);
+        $stmt->bind_param("sssssi", $fName, $lName, $email, $password, $username, $areaCode);
         $stmt->execute();         
         }catch (exception $e){
           echo "error";
